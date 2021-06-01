@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <title>crona map</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        background-color: rgb(31, 29, 29);
+    }
+    .heading h1{
+        color: red;
+        font-size: 2rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    #map{
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+<body>
+    <div class="heading">
+        <h1 >Covid Cases In World</h1>
+    </div>
+    <div id='map'></div>
+    
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZXdpdGh2aXNoYWwiLCJhIjoiY2twY3JuazZoMWNobTJ3dDd0bHFocGxheSJ9.WaWtqf66EZVBaVEwG2Lf5A';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/dark-v10',
+zoom: 1.5,
+center:[0,20]
+});
+</script>
+<script src="index.js"></script>
+</html>
